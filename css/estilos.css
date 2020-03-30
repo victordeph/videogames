@@ -1,0 +1,89 @@
+body{
+    font-family: open sans;
+    background-image: url(../img/p7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: black;
+
+
+}
+form{
+    margin:0 auto; 
+    width:300px;
+    background-color:white;
+    font-size:14px;
+    padding: 25px;
+    border-radius: 3px;
+}
+input{
+    border:0;
+    width: 280px;
+
+}
+
+.camposDatos{
+    border: solid 3px black;
+    padding: 10px;
+
+}
+
+.camposDatos1{
+    border: solid 3px black;
+    padding: 10px;
+
+}
+
+.camposDatos2{
+    border: solid 3px black;
+    padding: 10px;
+
+}
+
+
+.camposDatos:focus{
+    border-color: gray;
+}
+
+.camposDatos1:focus{
+    border-color: gray;
+}
+
+.camposDatos2:focus{
+    border-color: gray;
+}
+
+.btnGuardar{
+    margin-top: 15px;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-decoration: none;
+    background-color: orangered;
+    color: white;
+}
+
+.btnConsultar{
+    margin-top: 15px;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-decoration: none;
+    background-color:blue;
+    color: white;
+}
+
+.btnBuscar{
+    margin-top: 15px;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+}
+
+.centrarContenido{
+    text-align: center ;
+}

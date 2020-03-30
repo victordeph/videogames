@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Ingresar VideoJuego</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <form action="vistaInsert.html" method="post">
+        <center>
+            <p>
+                <h2>MENU PRINCIPAL</h2>
+            </p>
+        </center>
+        <center><img src="img/p3.png" alt="" width="80"></center>
+        <p class="centrarContenido"><input type="submit" name="btnGuardar" value="Añadir VideoJuego" class="btnGuardar">
+        </p>
+    </form>
+
+    <form action="controlador.php" method="post">
+        <p class="centrarContenido"><input type="submit" name="btnConsulta" value="Consultar" class="btnConsultar"></p>
+    </form>
+
+    <form action="controlador.php" method="post">
+        <input type="text" name="txtjuego" id="txtjuego" class="camposDatos" placeholder="Ingresa nombre de videojuego">
+        <p class="centrarContenido"><input type="submit" name="Buscar" value="Buscar" class="btnBuscar"></p>
+    </form>
+</body>
+
+</html>
+

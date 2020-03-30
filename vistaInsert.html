@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Ingresar VideoJuego</title>
+    <script src="js/validador.js"></script>
+
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <form action="controlador.php" method="post" onsubmit="return vacios()">
+        <center>
+            <p>
+                <h2>INGRESAR VIDEOJUEGO</h2>
+            </p>
+        </center>
+        <center><img src="img/p3.png" alt="" width="80"></center>
+        <p>Juego: </p>
+        <input type="text" name="txtjuego" id="txtjuego" class="camposDatos">
+
+        <p>Desarrollador:</p>
+        <input type="text" name="txtdes" id="txtdes" class="camposDatos1">
+
+        <p>Precio: </p>
+        <input type="number" name="txtprecio" id="txtprecio" class="camposDatos2">
+        <p class="centrarContenido"><input type="submit" name="btnGuardar" value="Save" class="btnGuardar"></p>
+
+
+        <center>
+            <a href=menuVistas.html> <p>Regresar al menu</p> </a>
+        </center>
+        
+    </form>
+    
+
+</body>
+
+</html>
