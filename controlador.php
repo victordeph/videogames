@@ -68,7 +68,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     <td>". $arrFilas['desarrollador']."</td>
     <td>". $arrFilas['precio']."</td>
 
-    <td> <a href='vistaActualizacion.php?id=" . $arrFilas['idvideo']."'> <img src='img/refrescar.png' > </a> </td>
+    <td> <a href='vistaActualizar.php?id=" . $arrFilas['idvideo']."'> <img src='img/refrescar.png' > </a> </td>
     <td> <a href='vistaEliminar.php?id=" . $arrFilas['idvideo']."'> <img src='img/elim.png' > </a> </td>
 
     </tr>";
@@ -99,7 +99,7 @@ echo "</table>";
     <td>". $fila[2]."</td>
     <td>". $fila[3]."</td>
 
-    <td> <a href='vistaActualizacion.php?id=" . $fila[0]."'> <img src='img/refrescar.png' > </a> </td>
+    <td> <a href='vistaActualizar.php?id=" . $fila[0]."'> <img src='img/refrescar.png' > </a> </td>
     <td> <a href='vistaEliminar.php?id=" . $fila[0]."'> <img src='img/elim.png' > </a> </td>
 
     </tr>";
@@ -107,8 +107,35 @@ echo "</table>";
 echo "</table>";
     }
 
-    
+    if(isset($_POST['btnActuzalizar'])){
+      $id= $_POST['txtId'];
+      $jue= $_POST['txtjuego'];
+      $des= $_POST['txtdes'];
+      $pre= $_POST['txtprecio'];
+      $statusA= actualizarJuego($jue,$des,$pre,$id);
 
+      if($statusA === 1){
+          echo '<script> alert("Videojuego Actualizado"); </script>';
+          echo "<META HTTP-EQUIV='REFRESH' CONTENT='0 ;URL= menuVistas.html'>";
+
+      } else{
+          echo '<script> alert("No Actualizado"); </script>';
+          echo "<META HTTP-EQUIV='REFRESH' CONTENT='0 ;URL= menuVistas.html'>";
+      }
+  }
+
+  if(isset($_POST['btnEliminar'])){
+    $id=$_POST['txtId'];
+$statusElim=eliminarJuego($id);
+
+if($statusElim){
+  echo '<script> alert("Videojuego Eliminado");</script>';
+  echo "<META HTTP-EQUIV='REFRESH' CONTENT='0 ;URL= menuVistas.html'>";
+}else{
+  echo '<script> alert("Error: No se pudo eliminar");</script>';
+  echo "<META HTTP-EQUIV='REFRESH' CONTENT='0 ;URL= menuVistas.html'>";
+}
+}
 
 
   ?>  

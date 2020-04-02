@@ -84,6 +84,25 @@ input{
     color: white;
 }
 
+.btnActualizar{
+    margin-top: 15px;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-decoration: none;
+    background-color: green;
+    color: white;
+}
+
+.btnEliminar{
+    margin-top: 15px;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+}
 .centrarContenido{
     text-align: center ;
 }

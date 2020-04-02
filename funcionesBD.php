@@ -54,4 +54,43 @@ function consultaVideojuego ($videojuego){
 
 }
 
+function consultarId ($id){
+    $conex = conectarBD();
+    $consxid = "select * from CATALOGO where idvideo = '$id'"; //creacion de conexion y de consulta 
+
+    $rsxid = mysqli_query($conex, $consxid);
+    mysqli_close($conex); //se ejecuta la consulta y se cierra la conexión
+    return $rsxid;
+}
+
+
+function actualizarJuego($jue,$des,$pre,$id){
+    $conex=conectarBD();
+    $actualiza= "UPDATE catalogo SET videojuego= ?, desarrollador= ?, precio= ? WHERE idvideo= ? ";
+
+    try{
+        $stm= $conex->prepare($actualiza);
+        $stm->bind_param('ssdi',$jue,$des,$pre,$id);
+        $stm->execute();
+        $stm->close();
+
+        mysqli_close($conex);
+
+        return 1;
+
+    } catch (Exception $e){
+        echo 'Excepcion capturada: ', $e->getMessage();
+    }
+}
+
+function eliminarJuego($id){
+    $conex=conectarBD();
+	$elimina="DELETE FROM CATALOGO where idvideo='$id'";
+
+	$rseliminar=mysqli_query($conex,$elimina);
+	mysqli_close($conex);
+
+	return $rseliminar;
+}
+
 ?>
